@@ -1,5 +1,8 @@
 export const mfConfig = {
   name: "home",
-  exposes: {},
+  exposes: {
+    "./Header": "./src/Header.tsx",
+    "./Footer": "./src/Footer.tsx"
+  },
   shared: ["react", "react-dom"],
 };
