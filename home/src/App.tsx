@@ -7,9 +7,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 
+
 const App = () => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header />
+    <Header name="Cabecera"/>
     <div>Name: home</div>
     <div>Framework: react-18</div>
     <Footer />
@@ -17,4 +18,4 @@ const App = () => (
 );
 
 const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
-root.render(<App />);
+root.render(<App/>);

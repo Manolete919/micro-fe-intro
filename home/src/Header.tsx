@@ -5,7 +5,12 @@ import { Link } from "react-router-dom";
 //import Login from "cart/Login";
 
 import "./index.css";
-export default function Header() {
+interface AppConfig {
+  name: string;
+}
+
+
+export default function Header(app: AppConfig) {
   const style = {
     color: 'blue',
     backgroundColor: 'lightgray',
@@ -14,7 +19,7 @@ export default function Header() {
   };
   return (
     <div style={style} className="p-5 bg-blue-500 text-white text-3xl font-bold">
-       Header
+       Caberera {app.name}
 
     </div>
   );
