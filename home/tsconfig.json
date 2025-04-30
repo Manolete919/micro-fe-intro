@@ -16,7 +16,7 @@
       "*": ["./@mf-types/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "../pdp/src/PDPContent.tsx"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

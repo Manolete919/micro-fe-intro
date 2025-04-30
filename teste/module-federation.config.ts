@@ -1,8 +1,10 @@
 export const mfConfig = {
-  name: "pdp",
+  name: "teste",
   remotes: {
     home: "home@http://localhost:3000/mf-manifest.json"
   },
-  exposes: {},
+  exposes: {
+
+  },
   shared: ["react", "react-dom"],
 };
