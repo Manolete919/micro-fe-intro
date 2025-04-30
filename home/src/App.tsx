@@ -5,14 +5,16 @@ import "./index.css";
 
 import Header from "./Header";
 import Footer from "./Footer";
+import HomeContent from "./HomeContent";
 
 
 
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
+  <div className="text-3xl mx-auto max-w-6xl">
     <Header name="Cabecera"/>
-    <div>Name: home</div>
-    <div>Framework: react-18</div>
+    <div className="my-10">
+      <HomeContent />
+     </div>
     <Footer />
    </div>
 );
