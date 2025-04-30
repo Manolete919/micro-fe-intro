@@ -1,2 +1,2 @@
-export * from './compiled-types/home/src/Header';
-export { default } from './compiled-types/home/src/Header';
+export * from './compiled-types/Header';
+export { default } from './compiled-types/Header';

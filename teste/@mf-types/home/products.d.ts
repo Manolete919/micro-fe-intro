@@ -1,2 +1,2 @@
-export * from './compiled-types/home/src/products';
-export { default } from './compiled-types/home/src/products';
+export * from './compiled-types/products';
+export { default } from './compiled-types/products';

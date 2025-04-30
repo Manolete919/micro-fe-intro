@@ -1,2 +1,2 @@
-export * from './compiled-types/home/src/Footer';
-export { default } from './compiled-types/home/src/Footer';
+export * from './compiled-types/Footer';
+export { default } from './compiled-types/Footer';

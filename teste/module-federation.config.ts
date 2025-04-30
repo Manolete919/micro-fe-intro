@@ -1,7 +1,7 @@
 export const mfConfig = {
   name: "teste",
   remotes: {
-    home: "home@http://localhost:3000/mf-manifest.json"
+    home: "home@http://localhost:5000/mf-manifest.json"
   },
   exposes: {
 
