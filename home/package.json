@@ -25,9 +25,10 @@
   },
   "dependencies": {
     "@module-federation/enhanced": "^0.8.9",
+    "@tailwindcss/cli": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.5.2",
+    "react-router-dom": "^7.5.3",
     "react-scripts": "^5.0.1"
   }
 }

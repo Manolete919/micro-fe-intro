@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "./index.css";
 
+ 
 //import MiniCart from "cart/MiniCart";
 //import Login from "cart/Login";
 
@@ -12,7 +13,7 @@ export default function Header() {
     borderRadius: '5px',
   };
   return (
-    <div style={style} className="p-5 bg-blue-500 text-white text-3xl font-bold">
+    <div  className="p-5 bg-blue-500 text-white text-3xl font-bold">
        Foooter
 
     </div>
