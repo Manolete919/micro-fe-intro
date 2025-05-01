@@ -2,7 +2,7 @@ import React from "react";
  
 //import MiniCart from "cart/MiniCart";
 //import Login from "cart/Login";
-import "./index.css";
+//import "./index.css";
 
 
 import "./index.css";
