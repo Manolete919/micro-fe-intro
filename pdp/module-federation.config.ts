@@ -1,5 +1,5 @@
 export const mfConfig = {
-  name: "teste",
+  name: "pdp",
   remotes: {
     home: "home@http://localhost:5000/mf-manifest.json"
   },
