@@ -59,6 +59,7 @@ export const login = (username:string, password:string) =>
   })
     .then((res) => res.json())
     .then((data) => {
+      console.log("data:" + data);
       jwt.next(data.access_token);
       getCart();
       return data.access_token;

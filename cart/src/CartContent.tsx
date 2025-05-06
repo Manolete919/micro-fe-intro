@@ -3,14 +3,31 @@ import React, { useState, useEffect } from "react";
 import { cart, clearCart } from "./cart";
 import { currency } from "home/products";
 import { Product }  from "./product";
+import { login, jwt } from "./cart";
 export default function CartContent() {
-  //const [items, setItems] = useState([]);
-  const [items, setItems] = useState<Product[]>([]);
 
-  /*useEffect(
-    () => cart.subscribe((value) => setItems(value?.cartItems ?? [])),
-    []
-  );*/
+  const [token, setToken] = useState<string>("");
+
+  useEffect(() => {
+    console.log("inicio de session")
+    login("sally","123");
+
+    const subcscription = jwt.subscribe((val) => setToken (val ?? ""));
+
+    // cleanup function
+    return () => {
+      subcscription.unsubscribe();
+    }
+
+  }, []);
+
+
+
+  return <div>JWT: {token}</div>
+
+   /*const [items, setItems] = useState<Product[]>([]);
+
+ 
 
 
   useEffect(() => {
@@ -22,6 +39,7 @@ export default function CartContent() {
   return (
     <>
       <div className="my-10 grid grid-cols-4 gap-5">
+        JWT: {}
         {items.map((item:Product) => (
           <React.Fragment key={item.id}>
             <div>{item.quantity}</div>
@@ -61,5 +79,6 @@ export default function CartContent() {
         </div>
       )}
     </>
-  );
+  );*/
+
 }
