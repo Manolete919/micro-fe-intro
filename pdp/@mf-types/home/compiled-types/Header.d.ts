@@ -1,6 +1,1 @@
-import "./index.css";
-interface AppConfig {
-    name: string;
-}
-export default function Header(app: AppConfig): import("react/jsx-runtime").JSX.Element;
-export {};
+export default function Header(): import("react/jsx-runtime").JSX.Element;

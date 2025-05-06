@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 
 import { cart, clearCart } from "./cart";
-import { currency } from "home/products";
+//import { currency } from "home/products";
 import { Product } from "./product";
 
 export default function MiniCart() {
@@ -58,19 +58,13 @@ export default function MiniCart() {
                 <div>{item.quantity}</div>
                 <img src={item.image} alt={item.name} className="max-h-6" />
                 <div>{item.name}</div>
-                <div className="text-right">
-                  {currency.format(item.quantity * item.price)}
-                </div>
+  
               </React.Fragment>
             ))}
             <div></div>
             <div></div>
             <div></div>
-            <div>
-              {currency.format(
-                items.reduce((a, v) => a + v.quantity * v.price, 0)
-              )}
-            </div>
+    
           </div>
           <div className="flex">
             <div className="flex-grow">

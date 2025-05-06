@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 import { cart, clearCart } from "./cart";
-import { currency } from "home/products";
+//import { currency } from "home/products";
 import { Product } from "./product";
 import { login, jwt } from "./cart";
 import MiniCart from "./MiniCart";
 import Login from "./Login";
 export default function CartContent() {
-  const [token, setToken] = useState<string>("");
+  /*const [token, setToken] = useState<string>("");
 
   useEffect(() => {
    
@@ -28,10 +28,10 @@ export default function CartContent() {
       <div>JWT: {token}</div>
       <Login />
       <MiniCart />
-      </div>)
+      </div>)*/
 
 
-  /*const [items, setItems] = useState<Product[]>([]);
+  const [items, setItems] = useState<Product[]>([]);
 
   useEffect(() => {
     const subscription = cart.subscribe((value) =>
@@ -49,17 +49,13 @@ export default function CartContent() {
             <div>{item.quantity}</div>
             <img src={item.image} alt={item.name} className="max-h-6" />
             <div>{item.name}</div>
-            <div className="text-right">
-              {currency.format(item.quantity * item.price)}
-            </div>
+
           </React.Fragment>
         ))}
         <div></div>
         <div></div>
         <div></div>
-        <div className="text-right" id="grand_total">
-          {currency.format(items.reduce((a, v) => a + v.quantity * v.price, 0))}
-        </div>
+   
       </div>
       {items.length > 0 && (
         <div className="flex mb-10">
@@ -83,5 +79,5 @@ export default function CartContent() {
         </div>
       )}
     </>
-  );*/
+  );
 }
