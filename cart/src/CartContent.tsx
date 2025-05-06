@@ -3,12 +3,6 @@ import React, { useState, useEffect } from "react";
 import { cart, clearCart } from "./cart";
 import { currency } from "home/products";
 import { Product }  from "./product";
-
-
- 
- 
-
-
 export default function CartContent() {
   //const [items, setItems] = useState([]);
   const [items, setItems] = useState<Product[]>([]);
