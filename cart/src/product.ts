@@ -6,4 +6,10 @@ export interface Product {
     image: string;
     longDescription: string;
     quantity: number;
+    cartItems: string;
+  }
+
+
+  export interface CartItems {
+    cartItems: Product[]
   }

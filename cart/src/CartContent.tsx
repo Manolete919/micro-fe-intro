@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 
 import { cart, clearCart } from "./cart";
 import { currency } from "home/products";
-import { Product }  from "./product";
+import { Product } from "./product";
 import { login, jwt } from "./cart";
+import MiniCart from "./MiniCart";
+import Login from "./Login";
 export default function CartContent() {
-
   const [token, setToken] = useState<string>("");
 
   useEffect(() => {
-    console.log("inicio de session")
-    login("sally","123");
+   
 
     const subcscription = jwt.subscribe((val) => setToken (val ?? ""));
 
@@ -23,24 +23,28 @@ export default function CartContent() {
 
 
 
-  return <div>JWT: {token}</div>
+  return (
+    <div>
+      <div>JWT: {token}</div>
+      <Login />
+      <MiniCart />
+      </div>)
 
-   /*const [items, setItems] = useState<Product[]>([]);
 
- 
-
+  /*const [items, setItems] = useState<Product[]>([]);
 
   useEffect(() => {
-    const subscription = cart.subscribe((value) => setItems(value?.cartItems ?? []));
+    const subscription = cart.subscribe((value) =>
+      setItems(value?.cartItems ?? [])
+    );
     return () => subscription.unsubscribe();
   }, []);
-    
 
   return (
     <>
       <div className="my-10 grid grid-cols-4 gap-5">
         JWT: {}
-        {items.map((item:Product) => (
+        {items.map((item: Product) => (
           <React.Fragment key={item.id}>
             <div>{item.quantity}</div>
             <img src={item.image} alt={item.name} className="max-h-6" />
@@ -80,5 +84,4 @@ export default function CartContent() {
       )}
     </>
   );*/
-
 }

@@ -6,6 +6,7 @@ import Header from "home/Header";
 import Footer from "home/Footer";
 import PDPContent from "./PDPContent";
 import { getProductById, currency } from "home/products";
+import "remixicon/fonts/remixicon.css";
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';

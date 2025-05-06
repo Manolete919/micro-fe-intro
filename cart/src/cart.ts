@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BehaviorSubject } from "rxjs";
+import { CartItems, Product } from "./product";
 
 const API_SERVER = "http://localhost:9080";
 
 export const jwt = new BehaviorSubject(null);
-export const cart = new BehaviorSubject(null);
+export const cart = new BehaviorSubject<CartItems|null>(null);
 
 export const getCart = () =>
   fetch(`${API_SERVER}/cart`, {
@@ -14,7 +15,7 @@ export const getCart = () =>
     },
   })
     .then((res) => res.json())
-    .then((res) => {
+    .then((res: CartItems) => {
       cart.next(res);
       return res;
     });
@@ -65,13 +66,18 @@ export const login = (username:string, password:string) =>
       return data.access_token;
     });
 
-/*export function useLoggedIn() {
+export function useLoggedIn() {
   const [loggedIn, setLoggedIn] = useState(!!jwt.value);
   useEffect(() => {
     setLoggedIn(!!jwt.value);
-    return jwt.subscribe((c) => {
+    const subscription = jwt.subscribe((c) => {
       setLoggedIn(!!jwt.value);
     });
+
+    return () => {
+      subscription.unsubscribe();
+    }
+
   }, []);
   return loggedIn;
-}*/
+}
